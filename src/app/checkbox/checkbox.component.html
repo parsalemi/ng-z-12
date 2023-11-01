@@ -1,0 +1,13 @@
+<div class="checkbox">
+    <label
+      nz-checkbox
+      [(ngModel)]="allChecked"
+      (ngModelChange)="updateAllChecked()"
+      [nzIndeterminate]="indeterminate"
+    >
+      Check all
+    </label>
+  </div>
+  <br />
+  <nz-checkbox-group [(ngModel)]="checkOptionsOne" (ngModelChange)="updateSingleChecked()" class="checkgroup"></nz-checkbox-group>
+  <h2>You selected : {{countCheck()}} </h2>

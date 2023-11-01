@@ -1,0 +1,36 @@
+.buttons{
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 250px;
+}
+.btn1{
+    background: linear-gradient(to left,#2400ee 0%,#DA0037 100%);
+    transition: 0s;
+    text-transform: none;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding:10px 20px;
+    font-weight: bolder;
+
+}
+.btn2{
+    background: linear-gradient(to right,#7cf518 0%,#001aff 100%);
+    transition: 0s;
+    text-transform: none;
+    color: white;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+.text{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    text-align: center;
+}

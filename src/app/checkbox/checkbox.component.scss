@@ -1,0 +1,15 @@
+.checkbox{
+    border-bottom: 2px solid black;
+    padding: 30px;
+    border-left: 2px solid black;
+    border-bottom-left-radius: 15px;
+    font-weight: bold;
+}
+.checkgroup{
+    padding: 30px;
+    width: 80%;
+    align-items: center;
+    justify-content: left;
+    display: flex;
+    gap: 30px;
+}
