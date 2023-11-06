@@ -1,0 +1,19 @@
+<div class="selectbars">
+  <nz-select [(ngModel)]="select" class="sel" nzPlaceHolder= "Choose">
+    <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+    <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+    <nz-option nzValue="parsa" nzLabel="Parsa" ></nz-option>
+  </nz-select>
+
+  <nz-select
+      [(ngModel)]="selectedValue"
+      [compareWith]="compareFn"
+      nzAllowClear
+      nzPlaceHolder="Choose"
+      class="sel">
+      <nz-option *ngFor="let option of optionList" [nzValue]="option" [nzLabel]="option.label"></nz-option>
+  </nz-select>
+</div>
+
+  <h3 *ngIf="select ? show : !show" class="det1">You selected : {{select}}</h3>
+  <h3 class="det2">You selected : {{selectedValue.label}}</h3>

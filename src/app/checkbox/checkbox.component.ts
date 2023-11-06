@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 @Component({
   selector: 'app-checkbox',
   templateUrl: './checkbox.component.html',
-  styleUrls: ['./checkbox.component.scss']
+  styleUrls: ['./checkbox.component.scss'],
+  imports: [FormsModule,NzCheckboxModule],
+  standalone:true
 })
 export class CheckboxComponent {
 
@@ -47,8 +50,9 @@ export class CheckboxComponent {
     if(this.checkOptionsOne[0].checked === true){a++;}
     if(this.checkOptionsOne[1].checked === true){a++;}
     if(this.checkOptionsOne[2].checked === true){a++;}
-    if(a ===3){return "All";}
+    if(a === 3){return "All";}
     else{return a;}
+    
   }
 }
 

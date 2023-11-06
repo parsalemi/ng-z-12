@@ -1,0 +1,27 @@
+<nz-tabset>
+    <nz-tab nzTitle="Email">parsalemi@outlook.com</nz-tab>
+    <nz-tab nzTitle="Phone">09120748517</nz-tab>
+    <nz-tab nzTitle="Address">dajshdiashdifhdsfsdfjhsdh</nz-tab>
+  </nz-tabset>
+
+
+
+<nz-input-number style="float:right;" [(ngModel)]="selectedIndex"></nz-input-number>
+
+<nz-tabset
+    style="height:220px;"
+    [(nzSelectedIndex)]="selectedIndex"
+    (nzSelectChange)="log([$event])"
+  >
+    <nz-tab
+      *ngFor="let tab of tabs"
+      [nzTitle]="tab.name"
+      [nzDisabled]="tab.disabled"
+      (nzSelect)="log(['select', tab])"
+      (nzClick)="log(['click', tab])"
+      (nzContextmenu)="log(['contextmenu', tab])"
+      (nzDeselect)="log(['deselect', tab])"
+    >
+      {{ tab.content }}
+    </nz-tab>
+</nz-tabset>

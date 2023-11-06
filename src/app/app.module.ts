@@ -7,23 +7,23 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {NzButtonModule} from 'ng-zorro-antd/button';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import {NzCheckboxModule} from 'ng-zorro-antd/checkbox';
-import { ButtonComponent } from "./button/button.component";
-import { CheckboxComponent } from './checkbox/checkbox.component';
+import { HeadermenuComponent } from './headermenu/headermenu.component';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import {NzSwitchModule} from 'ng-zorro-antd/switch';
+import { NzPageHeaderModule} from 'ng-zorro-antd/page-header';
 
 registerLocaleData(en);
 
 @NgModule({
     declarations: [
         AppComponent,
-        CheckboxComponent,
     ],
     providers: [
         { provide: NZ_I18N, useValue: en_US }
@@ -35,12 +35,14 @@ registerLocaleData(en);
         FormsModule,
         HttpClientModule,
         BrowserAnimationsModule,
-        NzButtonModule,
         NzLayoutModule,
         NzBreadCrumbModule,
         NzMenuModule,
         NzCheckboxModule,
-        ButtonComponent
+        HeadermenuComponent,
+        NzIconModule,
+        NzSwitchModule,
+        NzPageHeaderModule,
     ]
 })
 export class AppModule { }

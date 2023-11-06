@@ -1,9 +1,12 @@
 .logo {
     width: 120px;
     height: 31px;
-    background: rgba(255, 255, 255, 0.2);
     margin: 16px 30px 16px 0;
     float: left;
+}
+.logo span{
+    position: absolute;
+    top: 8px;
 }
 .header-menu {
     line-height: 64px;
@@ -14,17 +17,30 @@
 }
 .inner-layout {
     padding: 0 24px 24px;
+    background-color: #4477CE;
+    
 }
 nz-breadcrumb {
     margin: 16px 0;
 }
 nz-content {
-    background: #fff;
+    background: #8CABFF;
     padding: 24px;
     min-height: 280px;
+    
 }
 .a{
     display: flex;
     flex-direction: column;
     gap: 100px;
+}
+nz-sider nav{
+        @apply h-screen;
+}
+nz-sider a:hover{
+    color: #1890ff;
+}
+nz-content{
+    border: 3px solid black;
+    border-radius: 50px;
 }

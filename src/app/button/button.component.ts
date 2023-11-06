@@ -1,10 +1,11 @@
+import { NgForOf, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss'],
-  imports : [CommonModule,],
+  imports : [NgIf, NgForOf, NzButtonModule],
   standalone : true,
 })
 
