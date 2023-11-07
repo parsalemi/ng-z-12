@@ -12,6 +12,7 @@ const routes: Routes = [
   {path:'modal',loadComponent:() => import('./modal/modal.component').then(a => a.ModalComponent),data:{title:'Modal',breadcrumb:'modal'}},
   {path:'skeleton',loadComponent:() => import('./skeleton/skeleton.component').then(a => a.SkeletonComponent),data:{title:'Skeleton',breadcrumb:'skeleton'}},
   {path:'tabs',loadComponent:() => import('./tabs/tabs.component').then(a => a.TabsComponent),data:{title:'Tabs',breadcrumb:'tabs'}},
+  {path:'list',loadComponent:() => import('./list/list.component').then(a => a.ListComponent),data:{title:'List',breadcrumb:'list'}},
   { path: '', redirectTo: '/button', pathMatch: 'full' },
 ];
 

@@ -8,7 +8,6 @@ import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import en from '@angular/common/locales/en';
 import { FormsModule, } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb';
@@ -18,7 +17,8 @@ import { HeadermenuComponent } from './headermenu/headermenu.component';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import {NzSwitchModule} from 'ng-zorro-antd/switch';
 import { NzPageHeaderModule} from 'ng-zorro-antd/page-header';
-
+import { HttpClientModule } from '@angular/common/http';
+import { NgForOf } from '@angular/common';
 registerLocaleData(en);
 
 @NgModule({
@@ -43,6 +43,10 @@ registerLocaleData(en);
         NzIconModule,
         NzSwitchModule,
         NzPageHeaderModule,
+        HttpClientModule,
+        NgForOf,
+        
     ]
 })
-export class AppModule { }
+export class AppModule {
+ }

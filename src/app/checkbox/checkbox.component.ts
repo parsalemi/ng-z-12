@@ -18,7 +18,6 @@ export class CheckboxComponent {
     { label: '3', value: '3', checked: false }
   ]
   ;
-
   updateAllChecked(): void {
     this.indeterminate = false;
     if (this.allChecked) {
@@ -54,5 +53,13 @@ export class CheckboxComponent {
     else{return a;}
     
   }
-}
 
+showValue(){
+  for(var i = 0 ; i<=3 ;i++){
+    if(this.checkOptionsOne[i].checked == true){
+      return this.checkOptionsOne[i].label; 
+    }
+  }
+  return this.checkOptionsOne[i].value;
+}
+}

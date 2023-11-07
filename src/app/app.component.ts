@@ -8,10 +8,13 @@ import { filter, map } from 'rxjs';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit{
+  ​
+  
   constructor( 
     private router: Router,
     public titleService: Title,
-    private route: ActivatedRoute){}
+    private route: ActivatedRoute,
+    ){}
 
   theme : boolean = true;
 

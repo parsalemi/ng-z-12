@@ -70,7 +70,11 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "configurations": {
+          "options": {
+            "browserTarget": "ng-z-1:build",
+            "proxyConfig": "proxy.conf.json"
+          },
+           "configurations": {
             "production": {
               "browserTarget": "ng-z-1:build:production"
             },
