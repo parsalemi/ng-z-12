@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
-import { NzInputDirective } from 'ng-zorro-antd/input';
 import { FormsModule } from '@angular/forms';
+import { NzInputNumberModule } from "ng-zorro-antd/input-number";
+
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.component.html',
   styleUrls: ['./tabs.component.scss'],
-  standalone:true,
-  imports:[NzTabsModule,FormsModule]
+  standalone: true,
+  imports: [NzTabsModule, FormsModule, NzInputNumberModule]
 })
 export class TabsComponent {
   tabs: Array<{ name: string; content: string; disabled: boolean }> = [];
@@ -21,9 +22,9 @@ export class TabsComponent {
   ngOnInit(): void {
     for (let i = 0; i < 30; i++) {
       this.tabs.push({
-        name: `Tab ${i}`,
+        name: `Tab ${ i }`,
         disabled: i === 28,
-        content: `Content of tab ${i}`
+        content: `Content of tab ${ i }`
       });
     }
   }

@@ -1,32 +1,33 @@
-<div style="margin-bottom: 8px;"><button nz-button (click)="change()">Switch Data</button></div>
 <nz-list nzItemLayout="horizontal" [nzLoading]="loading">
   <nz-list-item *ngFor="let item of data">
     <nz-list-item-meta>
       <nz-list-item-meta-title>
-        <p>{{ item.name }}</p>
-        <p>{{item.description}}</p>
+        <p>{{ item.id }}</p>
+        <h2 style="font-weight: bold;">{{item.body}}</h2>
+        <p>{{item.title}}</p>
+        <button nz-button nzType="primary" type="button">Delete</button>
       </nz-list-item-meta-title>
     </nz-list-item-meta>
   </nz-list-item>
   <nz-list-empty *ngIf="data.length === 0"></nz-list-empty>
 </nz-list>
-    
+
 <form (ngSubmit)="insertData()">
   <div class="form-group">
-      <label for="name">Enter Name</label>
-      <input type="text" name="name" class="form-control" [(ngModel)]="employee.name">
+    <label for="name">Enter Name</label>
+    <input type="text" name="name" class="form-control" value="a" [(ngModel)]="employee.body">
   </div>
 
   <div class="form-group">
-      <label for="name">Enter Description</label>
-      <input type="text" name="description" class="form-control" [(ngModel)]="employee.description">
+    <label for="name">Enter Description</label>
+    <input type="text" name="email" class="form-control" [(ngModel)]="employee.title">
   </div>
 
   <div class="form-group">
-      <label for="name">Enter coach</label>
-      <input type="text" name="coach" class="form-control" [(ngModel)]="employee.coach">
+    <label for="name">Enter job</label>
+    <input type="number" name="id" class="form-control" [(ngModel)]="employee.id">
   </div>
 
-  <button class="btn btn-primary btn-sm mt-4">Submit</button>
+  <button class="btn btn-primary btn-sm mt-4" (click)="alert()">Submit</button>
 
 </form>

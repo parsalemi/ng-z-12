@@ -1,6 +1,6 @@
 export class Teamdata {
-    name:any;
-    description:any;
-    coach:any;
-    id?:number;
+  userId: any;
+  title: any;
+  body: any;
+  id?: number;
 }

@@ -34,9 +34,7 @@ nz-content {
     flex-direction: column;
     gap: 100px;
 }
-nz-sider nav{
-        @apply h-screen;
-}
+
 nz-sider a:hover{
     color: #1890ff;
 }

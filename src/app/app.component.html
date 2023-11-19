@@ -1,5 +1,5 @@
 <!-- NG-ZORRO -->
-<nz-layout style="height: 100vh">
+<nz-layout class="min-h-screen">
   <nz-header>
     
     <div class="logo"><span nz-icon nzType="windows" nzTheme="fill" style="color: white;font-size: 50px;" ></span></div>
@@ -7,9 +7,9 @@
     <app-headermenu></app-headermenu>
   </nz-header>
   <nz-layout>
-    <nz-sider nzWidth="200px" nzTheme="light">
+    <nz-sider nzWidth="200px" nzTheme="light" [nzTheme]="theme ? 'dark' : 'light'">
       <nav>
-        <ul nz-menu nzMode="inline" class="sider-menu" [nzTheme]="theme ? 'dark' : 'light'">
+        <ul nz-menu nzMode="inline" [nzTheme]="theme ? 'dark' : 'light'">
           <li nz-submenu nzOpen nzIcon="user" nzTitle="Button Type">
             <ul>
               <li nz-menu-item> <a routerLink="checkbox">Checkbox</a></li>
@@ -31,6 +31,7 @@
               <li nz-menu-item><a routerLink="skeleton">Skeleton</a></li>
               <li nz-menu-item><a routerLink="tabs">Tabs</a></li>
               <li nz-menu-item><a routerLink="list">List</a></li>
+              <li nz-menu-item><a routerLink="ngtemp">ngtemp</a></li>
               <li nz-submenu nzTitle="About us">
                 <ul>
                   <li nz-menu-item>Phone & Email</li>
