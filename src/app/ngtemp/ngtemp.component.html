@@ -1,0 +1,19 @@
+<label>
+  <input [(ngModel)]="text" type="text" placeholder="type">
+  <input type="checkbox" [(ngModel)]="selected">
+</label>
+
+<ng-template #sdf>
+  <div>
+    <span>slm</span>
+    <span>aleyk</span>
+  </div>
+</ng-template>
+
+<div [ngTemplateOutlet]="sdf" *ngIf="selected"></div>
+<div [ngTemplateOutlet]="sdf" *ngIf="selected"></div>
+<div [ngTemplateOutlet]="sdf" *ngIf="selected"></div>
+<div [ngTemplateOutlet]="sdf" *ngIf="selected"></div>
+<div [ngTemplateOutlet]="sdf"></div>
+<div [ngTemplateOutlet]="sdf"></div>
+<button nz-button nzType="primary" (click)="sel()">asdasdasd</button>
