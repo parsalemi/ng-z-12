@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { NzCollapseModule } from 'ng-zorro-antd/collapse';
-import { NgForOf } from '@angular/common';
+
 @Component({
   selector: 'app-collapse',
   templateUrl: './collapse.component.html',
   styleUrls: ['./collapse.component.scss'],
   standalone: true,
-  imports: [NzCollapseModule,NgForOf],
+  imports: [NzCollapseModule],
 })
 export class CollapseComponent {
   panels: PanelsModel[] = [

@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
+
 @Component({
   selector: 'app-checkbox',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss'],
-  imports: [FormsModule,NzCheckboxModule],
-  standalone:true
+  imports: [FormsModule, NzCheckboxModule],
+  standalone: true
 })
 export class CheckboxComponent {
 
@@ -18,6 +19,7 @@ export class CheckboxComponent {
     { label: '3', value: '3', checked: false }
   ]
   ;
+
   updateAllChecked(): void {
     this.indeterminate = false;
     if (this.allChecked) {
@@ -44,22 +46,32 @@ export class CheckboxComponent {
       this.indeterminate = true;
     }
   }
-  countCheck(){
+
+  countCheck() {
     var a = 0;
-    if(this.checkOptionsOne[0].checked === true){a++;}
-    if(this.checkOptionsOne[1].checked === true){a++;}
-    if(this.checkOptionsOne[2].checked === true){a++;}
-    if(a === 3){return "All";}
-    else{return a;}
-    
+    if (this.checkOptionsOne[0].checked === true) {
+      a++;
+    }
+    if (this.checkOptionsOne[1].checked === true) {
+      a++;
+    }
+    if (this.checkOptionsOne[2].checked === true) {
+      a++;
+    }
+    if (a === 3) {
+      return "All";
+    } else {
+      return a;
+    }
+
   }
 
-showValue(){
-  for(var i = 0 ; i<=3 ;i++){
-    if(this.checkOptionsOne[i].checked == true){
-      return this.checkOptionsOne[i].label; 
+  showValue() {
+    for (var i = 0; i <= 3; i++) {
+      if (this.checkOptionsOne[i].checked == true) {
+        return this.checkOptionsOne[i].label;
+      }
     }
+    return this.checkOptionsOne[i].value;
   }
-  return this.checkOptionsOne[i].value;
-}
 }

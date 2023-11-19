@@ -10,10 +10,18 @@
   </div>
 </ng-template>
 
-<div [ngTemplateOutlet]="sdf" *ngIf="selected"></div>
-<div [ngTemplateOutlet]="sdf" *ngIf="selected"></div>
-<div [ngTemplateOutlet]="sdf" *ngIf="selected"></div>
-<div [ngTemplateOutlet]="sdf" *ngIf="selected"></div>
+@if (selected) {
+<div [ngTemplateOutlet]="sdf"></div>
+}
+@if (selected) {
+<div [ngTemplateOutlet]="sdf"></div>
+}
+@if (selected) {
+<div [ngTemplateOutlet]="sdf"></div>
+}
+@if (selected) {
+<div [ngTemplateOutlet]="sdf"></div>
+}
 <div [ngTemplateOutlet]="sdf"></div>
 <div [ngTemplateOutlet]="sdf"></div>
 <button nz-button nzType="primary" (click)="sel()">asdasdasd</button>

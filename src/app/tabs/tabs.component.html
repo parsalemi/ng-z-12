@@ -1,5 +1,5 @@
 <nz-tabset>
-  <nz-tab nzTitle="Email">parsalemi@outlook.com</nz-tab>
+  <nz-tab nzTitle="Email">parsalemi&#64;outlook.com</nz-tab>
   <nz-tab nzTitle="Phone">09120748517</nz-tab>
   <nz-tab nzTitle="Address">dajshdiashdifhdsfsdfjhsdh</nz-tab>
 </nz-tabset>
@@ -11,8 +11,9 @@
   [(nzSelectedIndex)]="selectedIndex"
   (nzSelectChange)="log([$event])"
 >
+  @for (tab of tabs; track tab) {
   <nz-tab
-    *ngFor="let tab of tabs"
+
     [nzTitle]="tab.name"
     [nzDisabled]="tab.disabled"
     (nzSelect)="log(['select', tab])"
@@ -22,4 +23,5 @@
   >
     {{ tab.content }}
   </nz-tab>
+  }
 </nz-tabset>

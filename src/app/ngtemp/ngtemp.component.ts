@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgIf, NgTemplateOutlet } from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NzButtonModule } from "ng-zorro-antd/button";
 
@@ -8,7 +8,7 @@ import { NzButtonModule } from "ng-zorro-antd/button";
   templateUrl: './ngtemp.component.html',
   styleUrls: ['./ngtemp.component.scss'],
   standalone: true,
-  imports: [NgTemplateOutlet, NgIf, FormsModule, NzButtonModule]
+  imports: [NgTemplateOutlet, FormsModule, NzButtonModule]
 })
 export class NgtempComponent {
   selected: boolean = false;

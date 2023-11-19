@@ -2,7 +2,7 @@ import { ApiDataService, } from './../services/api-data.service';
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { Component } from '@angular/core';
 import { NzListModule } from 'ng-zorro-antd/list';
-import { AsyncPipe, NgForOf, NgIf } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { Teamdata } from '../teamdata';
@@ -12,7 +12,7 @@ import { Teamdata } from '../teamdata';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss'],
   standalone: true,
-  imports: [NzListModule, NzSwitchModule, NgIf, NgForOf, AsyncPipe, NzButtonModule, FormsModule]
+  imports: [NzListModule, NzSwitchModule, AsyncPipe, NzButtonModule, FormsModule]
 })
 export class ListComponent {
   loading = false;
@@ -23,11 +23,13 @@ export class ListComponent {
   }
 
   ngOnInit(): void {
-    // this.qwe.getApi().subscribe(t => {this.data = t});
-    // this.getemployeesdata();
-    fetch('https://jsonplaceholder.typicode.com/posts').then(a => a.json()).then(b => {
-      this.data = b;
+    this.qwe.getApi().subscribe(t => {
+      this.data = t
     });
+    this.getemployeesdata();
+    // fetch('https://jsonplaceholder.typicode.com/posts').then(a => a.json()).then(b => {
+    //   this.data = b;
+    // });
 
   }
 

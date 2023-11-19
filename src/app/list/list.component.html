@@ -1,5 +1,6 @@
 <nz-list nzItemLayout="horizontal" [nzLoading]="loading">
-  <nz-list-item *ngFor="let item of data">
+  @for (item of data; track item) {
+  <nz-list-item>
     <nz-list-item-meta>
       <nz-list-item-meta-title>
         <p>{{ item.id }}</p>
@@ -9,7 +10,10 @@
       </nz-list-item-meta-title>
     </nz-list-item-meta>
   </nz-list-item>
-  <nz-list-empty *ngIf="data.length === 0"></nz-list-empty>
+  }
+  <!--  @if (data.length === 0) {-->
+  <!--<nz-list-empty></nz-list-empty>-->
+  <!--}-->
 </nz-list>
 
 <!--<form (ngSubmit)="insertData()">-->

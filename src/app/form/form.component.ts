@@ -1,19 +1,25 @@
 import { Component } from '@angular/core';
-import {AbstractControl,FormControl,FormGroup,NonNullableFormBuilder,ValidatorFn,Validators,ReactiveFormsModule} from '@angular/forms';
-import { NzFormTooltipIcon } from 'ng-zorro-antd/form';
-import { NzFormModule } from 'ng-zorro-antd/form';
+import {
+  AbstractControl,
+  FormControl,
+  FormGroup,
+  NonNullableFormBuilder,
+  ReactiveFormsModule,
+  ValidatorFn,
+  Validators
+} from '@angular/forms';
+import { NzFormModule, NzFormTooltipIcon } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzCheckboxModule } from 'ng-zorro-antd/checkbox';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.scss'],
-  imports:[NzFormModule,NzInputModule,NzSelectModule,NzCheckboxModule,ReactiveFormsModule, NzButtonModule, NgIf],
-  standalone:true,
+  imports: [NzFormModule, NzInputModule, NzSelectModule, NzCheckboxModule, ReactiveFormsModule, NzButtonModule],
+  standalone: true,
 })
 export class FormComponent {
   validateForm: FormGroup<{
@@ -76,5 +82,5 @@ export class FormComponent {
       agree: [false]
     });
   }
-  
+
 }

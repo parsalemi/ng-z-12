@@ -1,15 +1,17 @@
-import { Component} from '@angular/core';
-import { NzModalModule,NzModalService, } from 'ng-zorro-antd/modal';
+import { Component } from '@angular/core';
+import { NzModalModule, NzModalService, } from 'ng-zorro-antd/modal';
 import { NzButtonModule } from 'ng-zorro-antd/button';
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss'],
-  standalone:true,
-  imports:[NzModalModule, NzButtonModule]
+  standalone: true,
+  imports: [NzModalModule, NzButtonModule]
 })
 export class ModalComponent {
-  constructor(private modal: NzModalService) {}
+  constructor(private modal: NzModalService) {
+  }
 
   showConfirm(): void {
     this.modal.confirm({

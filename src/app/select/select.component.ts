@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { FormsModule } from '@angular/forms';
-import { NgIf , NgForOf} from '@angular/common';
+
 @Component({
   selector: 'app-select',
   templateUrl: './select.component.html',
   styleUrls: ['./select.component.scss'],
-  imports: [NzSelectModule,FormsModule,NgIf,NgForOf],
-  standalone:true
+  imports: [NzSelectModule, FormsModule],
+  standalone: true
 })
 export class SelectComponent {
   optionList = [

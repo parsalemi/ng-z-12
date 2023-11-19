@@ -1,11 +1,13 @@
 <nz-collapse
   nzAccordion
 >
+  @for (panel of panels; track panel) {
   <nz-collapse-panel
-    *ngFor="let panel of panels"
+
     [nzHeader]="panel.name"
     [nzActive]="panel.active"
   >
     <p>{{ panel.name }} : {{ panel.description }}</p>
   </nz-collapse-panel>
+  }
 </nz-collapse>

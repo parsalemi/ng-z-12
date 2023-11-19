@@ -71,15 +71,15 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ng-z-1:build",
-            "proxyConfig": "proxy.conf.json"
+            "proxyConfig": "proxy.conf.json",
+            "buildTarget": "ng-z-1:build"
           },
            "configurations": {
             "production": {
-              "browserTarget": "ng-z-1:build:production"
+              "buildTarget": "ng-z-1:build:production"
             },
             "development": {
-              "browserTarget": "ng-z-1:build:development"
+              "buildTarget": "ng-z-1:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-z-1:build"
+            "buildTarget": "ng-z-1:build"
           }
         },
         "test": {
